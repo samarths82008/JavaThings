@@ -1,0 +1,29 @@
+public class Time {
+    public static void main(String[] args) {
+        // Initialize time variables (24-hour format)
+        int hour = 14;
+        int minute = 30;
+        int second = 45;
+        
+        // Calculate seconds since midnight
+        int secondsSinceMidnight = hour * 3600 + minute * 60 + second;
+        System.out.println("Seconds since midnight: " + secondsSinceMidnight);
+        
+        // Calculate seconds remaining in the day
+        int secondsInDay = 24 * 3600;
+        int secondsRemaining = secondsInDay - secondsSinceMidnight;
+        System.out.println("Seconds remaining in the day: " + secondsRemaining);
+        
+        // Calculate percentage of the day passed
+        double percentagePassed = (secondsSinceMidnight / (double) secondsInDay) * 100;
+        System.out.println("Percentage of the day passed: " + percentagePassed + "%");
+        
+        // Simulate elapsed time
+        int newHour = 15;
+        int newMinute = 15;
+        int newSecond = 30;
+        int newSecondsSinceMidnight = newHour * 3600 + newMinute * 60 + newSecond;
+        int elapsedTime = newSecondsSinceMidnight - secondsSinceMidnight;
+        System.out.println("Elapsed time since program started: " + elapsedTime + " seconds");
+    }
+}
